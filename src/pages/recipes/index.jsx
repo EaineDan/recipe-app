@@ -49,7 +49,7 @@ export default function Recipes() {
         setKeyword(event.target.value)}
       />
 
-      <Grid sx={{ my: "2rem" }} container spacing={3}>
+      <Grid sx={{ my: "2rem", justifyContent: 'center' }} container spacing={3}>
         {recipes.length > 0 ? recipes.map(recipe => (<Grid key={recipe.id} item xs={4}>
           <Card sx={{ maxWidth: 345, height: '100%'}}>
             <CardActionArea sx={{height: '100%'}} >
@@ -66,7 +66,7 @@ export default function Recipes() {
               </CardContent>
             </CardActionArea>
           </Card>
-        </Grid>)) :<img src={emptyIcon} width={'50%'}/>}
+        </Grid>)) :<img src={emptyIcon} width={'50%'} alt="Recipe not found"/>}
       </Grid>
     </Container>
   );
